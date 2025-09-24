@@ -1,0 +1,39 @@
+{
+  "name": "@arkan/app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5173 --strictPort",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Arkan full-stack Convex app",
+  "type": "module",
+  "dependencies": {
+    "@convex-dev/auth": "^0.0.90",
+    "@headlessui/react": "^2.2.8",
+    "autoprefixer": "^10.4.21",
+    "clsx": "^2.1.1",
+    "convex": "^1.27.3",
+    "lucide-react": "^0.544.0",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.13",
+    "vite": "^7.1.7",
+    "zod": "^4.1.11",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.2"
+  }
+}
