@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ConvexProvider, ConvexReactClient } from 'convex/react';
-import { AuthProvider } from '@convex-dev/auth/react';
+import { ConvexReactClient } from 'convex/react';
+import { ConvexAuthProvider } from '@convex-dev/auth/dist/react';
 import App from './pages/App';
 import './styles.css';
 
@@ -11,11 +11,11 @@ const client = convexUrl ? new ConvexReactClient(convexUrl) : undefined;
 createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {client ? (
-      <ConvexProvider client={client}>
-        <AuthProvider>
+      <ConvexAuthProvider client={client}>
+
           <App />
-        </AuthProvider>
-      </ConvexProvider>
+
+      </ConvexAuthProvider>
     ) : (
       <div style={{padding:20}}>Missing VITE_CONVEX_URL. Set it in .env.local after deploying Convex.</div>
     )}
